@@ -49,3 +49,6 @@ else
   echo "No chsh command found. Auto-starting Zsh via ~/.bashrc"
   echo 'exec zsh' >> ~/.bashrc
 fi
+
+# Launch Zsh now if not already inside it
+[ "$SHELL" != "$(command -v zsh)" ] && exec zsh
