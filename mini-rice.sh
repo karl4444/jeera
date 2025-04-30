@@ -59,10 +59,3 @@ else
   echo
   echo "✅ You're already inside Zsh!"
 fi
-
-# Force start Zsh unless we're already in it
-if [ -z "$ZSH_VERSION" ]; then
-  echo
-  echo "✨ Mini-rice is complete — launching Zsh..."
-  exec zsh
-fi
