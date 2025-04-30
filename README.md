@@ -16,11 +16,30 @@ A lightweight shell bootstrapper for instantly setting up a familiar Zsh environ
 
 ---
 
-## ✅ One-Command Install
+## ✅ Installation for Fresh VMs
+This assumes you already have Docker installed and running
 
-On a fresh Debian VM, run
-
+### Debian 
+#### Start the Debian VM
+```bash
+docker run -it debian bash
+```
+#### Install dependencies and run jeera
 ```bash
 apt update
 apt install -y curl git zsh
 curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/mini-rice.sh | sh
+```
+
+###Alpine
+#### Start the Alpine VM
+
+```bash
+docker run -it alpine sh
+```
+
+#### Install dependencies and run jeera
+```bash
+apk add --no-cache curl git zsh
+curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/mini-rice.sh | sh
+```
