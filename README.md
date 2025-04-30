@@ -31,7 +31,7 @@ apt install -y curl git zsh
 curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/mini-rice.sh | sh
 ```
 
-###Alpine
+### Alpine
 #### Start the Alpine VM
 
 ```bash
