@@ -4,7 +4,7 @@ A lightweight shell bootstrapper for instantly setting up a familiar Zsh environ
 
 ---
 
-## 🚀 What It Does
+## What It Does
 
 - Installs:
   - Zsh
@@ -16,7 +16,7 @@ A lightweight shell bootstrapper for instantly setting up a familiar Zsh environ
 
 ---
 
-## ✅ One-Line Install
+## ✅ One-Command Install
 
 On a fresh Debian VM, run
 
