@@ -38,5 +38,14 @@ PLUGINDIR="${ZSH}/custom/plugins"
 curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/zshrc -o ~/.zshrc
 curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/p10k.zsh -o ~/.p10k.zsh
 
-# Launch Zsh
-exec zsh
+# Set Zsh as default shell or fallback to auto-starting it
+if command -v chsh >/dev/null 2>&1; then
+  CURRENT_SHELL="$(basename "$SHELL")"
+  if [ "$CURRENT_SHELL" != "zsh" ]; then
+    echo "Changing default shell to Zsh (may require password)..."
+    chsh -s "$(command -v zsh)" 2>/dev/null || echo "⚠️ Could not change shell — continuing anyway"
+  fi
+else
+  echo "No chsh command found. Auto-starting Zsh via ~/.bashrc"
+  echo 'exec zsh' >> ~/.bashrc
+fi
