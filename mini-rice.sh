@@ -35,8 +35,8 @@ PLUGINDIR="${ZSH}/custom/plugins"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting "${PLUGINDIR}/zsh-syntax-highlighting"
 
 # Download config files
-curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USER/mini-rice/main/zshrc -o ~/.zshrc
-curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USER/mini-rice/main/p10k.zsh -o ~/.p10k.zsh
+curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/zshrc -o ~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/karl4444/jeera/main/p10k.zsh -o ~/.p10k.zsh
 
 # Launch Zsh
 exec zsh
