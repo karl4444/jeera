@@ -50,5 +50,19 @@ else
   echo 'exec zsh' >> ~/.bashrc
 fi
 
-# Launch Zsh now if not already inside it
-[ "$SHELL" != "$(command -v zsh)" ] && exec zsh
+# ⛩ Launch Zsh now (if not already inside it)
+if [ -z "$ZSH_VERSION" ]; then
+  echo
+  echo "✨ Mini-rice is complete!"
+  echo "➡️  Type 'zsh' now to enter your riced shell."
+else
+  echo
+  echo "✅ You're already inside Zsh!"
+fi
+
+# Force start Zsh unless we're already in it
+if [ -z "$ZSH_VERSION" ]; then
+  echo
+  echo "✨ Mini-rice is complete — launching Zsh..."
+  exec zsh
+fi
